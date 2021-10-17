@@ -1,3 +1,78 @@
+# 小売業向け売上・在庫管理システム開発
+AWS、Serverless FrameworkによるWebシステムのスクラム開発
+## 期間
+2021年05月 〜 
+## 業務内容
+### 開発の概要
+* 要件定義をもとに「発注」「検収」等の各業務を解決するAPIの設計
+* 実行権限の設定
+* Lambda実装・テスト
+* 追加・改修した機能のリリース
+
+概ね1ヶ月程度を1スパンとして、上記の設計〜実装〜テスト〜リリースのサイクルを繰り返してスクラム開発を行った。
+
+### 担当した機能
+* システムの各API（バックエンド）
+    * 発注情報更新API
+    * 一括出荷登録API
+    * 一括検収・個別検収API
+    * 返品 データ取得、更新API
+    * etc
+
+### 担当業務
+* 開発（設計、実装、テスト）
+
+### 使用した技術
+* AWS
+    * API Gateway
+    * CloudFormation
+    * CloudWatch
+    * Cognito
+    * EC2
+    * Firehose
+    * IAM
+    * Kinesis
+    * Lambda
+    * S3
+    * Secrets Manager
+    * SES
+    * Single Sign-On
+    * SQS
+    * Step Functions
+    * Systems Manager
+    * WAF
+* Serverless Framework
+* Python
+    * boto3
+    * peewee
+    * pytest
+    * pyenv-virtualenv
+* MySQL
+* Swagger
+* LocalStack
+* GitHub Actions
+* Git, GitHub, Docker, VSCode
+* Jira, Confluence, Backlog, Cacoo, Qast, Slack
+
+### 習得した技術
+* Serverless Framework + API Gateway + PythonによるREST APIの開発
+* スクラムでの開発
+
+### チーム構成
+6名
+* プロダクトオーナー：30代
+* リーダー：30代・有識者
+* スクラムマスター：30代・有識者
+* 開発メンバー1(フロントエンド)：20代・実務歴6年
+* 開発メンバー2(バックエンド)：20代・実務歴5年
+* 開発メンバー3(バックエンド)：本人・実務歴4年
+
+### メンバーとしての振る舞い
+Pythonによる開発経験がメンバー内で最も豊富だったため、率先してモジュール構成や記述方針、テスト方法の提案を行った。
+一方でAPI GatewayやSwagger等の経験はなかったが、他メンバーのサポートも貰いながらキャッチアップして、担当可能な領域を絞ることなく柔軟に動くことを心がけた。
+
+
+
 # 某通信キャリア向け回線管理自動化開発
 設備運用管理業務の自動化に伴うスクリプト開発
 ## 期間
