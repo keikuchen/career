@@ -3,6 +3,10 @@ AWS、Serverless FrameworkによるWebシステムのスクラム開発
 ## 期間
 2021年05月 〜 
 ## 業務内容
+### 本案件の背景
+既存のEDIシステムは各店舗の在庫をリアルタイムで把握できず、適切な発注・在庫管理に多大なコストを要していた。
+またサーバ自体も老朽化しており、今後の事業展開にも耐え得る新しいシステムの構築が求められていた。
+
 ### 開発の概要
 * 要件定義をもとに「発注」「検収」等の各業務を解決するAPIの設計
 * 実行権限の設定
@@ -24,14 +28,14 @@ AWS、Serverless FrameworkによるWebシステムのスクラム開発
 
 ### 使用した技術
 * AWS
+    * Amplify
     * API Gateway
     * CloudFormation
     * CloudWatch
     * Cognito
     * EC2
-    * Firehose
     * IAM
-    * Kinesis
+    * Kinesis Data Firehose
     * Lambda
     * S3
     * Secrets Manager
@@ -45,8 +49,8 @@ AWS、Serverless FrameworkによるWebシステムのスクラム開発
 * Python
     * boto3
     * peewee
-    * pytest
     * pyenv-virtualenv
+    * pytest
 * MySQL
 * Swagger
 * LocalStack
