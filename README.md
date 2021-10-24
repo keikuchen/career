@@ -196,7 +196,11 @@ ETLツールで構築しているデータ連携基盤について、連携す�
 * PowerCenterに取り込み可能なXMLファイルの仕様調査
 
 ### 使用した技術
-Python(pandas, ElementTree), PyCharm, Sphinx, Git
+* Python(pandas, ElementTree)
+* PyCharm
+* Sphinx
+* Git
+* Informatica PowerCenter
 
 ### 習得した技術
 * pandasを用いたデータ分析、表データの入出力
@@ -212,7 +216,7 @@ CLIツール開発チーム：3名
 
 ### メンバーとしての振る舞い
 Pythonの実務的な開発経験を持つのが自分のみであったため、開発環境の構築方法や実装方針の策定を率先して実施。
-開発メンバー全員が主体的に成長できるよう、PMと交渉しながら開発担当の配分を調整。
+リーダーと交渉してPython経験の少ない他メンバーにも実装タスクを積極的に割り振り、開発メンバー全員が主体的に成長できるよう心がけた。
 
 
 
