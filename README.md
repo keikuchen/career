@@ -1,65 +1,65 @@
 # 小売業向け売上・在庫管理システム開発
 AWS、Serverless FrameworkによるWebシステムのスクラム開発
 ## 期間
-2021年05月 〜 
+2021年05月 〜 2022年02月 (10ヶ月)
 ## 業務内容
 ### 本案件の背景
 既存のEDIシステムは各店舗の在庫をリアルタイムで把握できず、適切な発注・在庫管理に多大なコストを要していた。
 またサーバ自体も老朽化しており、今後の事業展開にも耐え得る新しいシステムの構築が求められていた。
 
 ### 開発の概要
-* 要件定義をもとに「発注」「検収」等の各業務を解決するAPIの設計
-* 実行権限の設定
-* Lambda実装・テスト
-* 追加・改修した機能のリリース
-
-概ね1ヶ月程度を1スパンとして、上記の設計〜実装〜テスト〜リリースのサイクルを繰り返してスクラム開発を行った。
+* 本社・店舗・仕入先の三者が共通で使用するシステムを開発する
+    * ユーザの種類によって利用可能な画面・機能を出し分ける
+* 既成の販売管理システム(スマレジ)と連携する
+    * スマレジから発注情報を受け取る
+    * 本システムで受注〜出荷〜検品業務等を管理する
+    * 適宜スマレジに対して更新情報を送る
+* 各店舗の在庫状況を基に自動で発注登録を行う機能を持つ
+* CSVファイルを使って複数の発注データを一括で処理する機能を持つ
+* 発注書や支払明細書等の帳票を出力する機能を持つ
+* スクラム開発を採用し、概ね1ヶ月程度のサイクルで開発とリリースを順次実施
 
 ### 担当した機能
-* システムの各API（バックエンド）
-    * 発注情報更新API
-    * 一括出荷登録API
-    * 一括検収・個別検収API
-    * 返品 データ取得、更新API
-    * etc
+* スマレジから発注データを受け取り、本システムへ登録/更新を行う機能
+* CSVを用いた一括出荷処理機能
+* 画面から入力されたデータのバリデーション・変換処理
+* etc
 
 ### 担当業務
-* 開発（設計、実装、テスト）
+* 設計
+    * 各APIのI/Oの検討
+    * エラーハンドリング(リトライ・メール通知の方法やタイミング)の検討
+* 実装
+    * PythonによるLambdaの実装
+    * Serverless Frameworkに基づいたYAMLファイルの作成、デプロイ
+    * AWS CloudFormationによるSQSキュー、S3バケット等の作成
+* テスト
+    * pytestを利用した単体テスト
+    * Swagger UIを使用したAPIのテスト
+    * 外部システム連携部分のパフォーマンステスト
+    * フロント・バック・インフラそれぞれに関する実装のレビュー
 
-### 使用した技術
-* AWS
-    * Amplify
-    * API Gateway
-    * CloudFormation
-    * CloudWatch
-    * Cognito
-    * EC2
-    * IAM
-    * Kinesis Data Firehose
-    * Lambda
-    * S3
-    * Secrets Manager
-    * SES
-    * Single Sign-On
-    * SQS
-    * Step Functions
-    * Systems Manager
-    * WAF
-* Serverless Framework
-* Python
-    * boto3
-    * peewee
-    * pyenv-virtualenv
-    * pytest
-* MySQL
-* Swagger
-* LocalStack
-* GitHub Actions
-* Git, GitHub, Docker, VSCode
-* Jira, Confluence, Backlog, Cacoo, Qast, Slack
+### 技術スタック
+* 言語・フレームワーク・ライブラリ
+    * Vue.js
+    * Python, peewee(O/RM), pytest
+    * Serverless Framework
+    * MySQL
+* アプリケーション
+    * AWS Step Functions, Lambda
+    * Amazon API Gateway, S3, SES, SQS, EC2
+* DevOps
+    * AWS CloudFormation
+    * GitHub, Docker
+    * Swagger UI, LocalStack
+    * GitHub Actions
+* 設計・コミュニケーション
+    * Jira, Confluence, Cacoo, Qast, Slack
 
 ### 習得した技術
-* Serverless Framework + API Gateway + PythonによるREST APIの開発
+* Serverless Framework
+    * API Gateway + PythonによるREST APIの開発
+    * SQS等のインフラリソースの管理
 * スクラムでの開発
 
 ### チーム構成
@@ -92,15 +92,18 @@ Pythonによる開発経験がメンバー内で最も豊富だったため、�
 ### 担当した機能
 * 特定の機器の状態をリセットする機能
 * 特定の機器のステータスを取得する機能
-等
+* etc
 
 ### 担当業務
 * 開発（実装、テスト）
 
-### 使用した技術
-* Python(Netmiko, TextFSM)
-* Git, GitLab, VSCode
-* Confluence
+### 技術スタック
+* 言語・フレームワーク・ライブラリ
+    * Python, Netmiko, TextFSM
+* DevOps
+    * Git, GitLab, VSCode
+* 設計・コミュニケーション
+    * Confluence, Teams
 
 ### 習得した技術
 * Netmikoを用いたネットワーク機器の操作
@@ -112,7 +115,7 @@ Pythonによる開発経験がメンバー内で最も豊富だったため、�
 * リーダー：30代・有識者
 * サブリーダー：30代・有識者
 * 開発メンバー1：本人・実務歴3年
-* 開発メンバー2-13：20-30代(直接的な交流があまりないため詳細不明)
+* 開発メンバー2-13：20-30代(直接的な交流があまりなかったため詳細不明)
 
 ### メンバーとしての振る舞い
 チーム全体としては、メンバー各人がそれぞれ別の機器のインタフェースの開発を行うスタイルで実施。
@@ -143,10 +146,17 @@ AWS上で構築されたバッチ処理群の追加開発を担当。
 ### 担当業務
 * 開発（設計、実装、テスト）
 
-### 使用した技術
-* AWS(CodeBuild, CloudFormation, Step Functions, Lambda, Batch, Glue, Athena, S3, DynamoDB)
-* Python(pandas, dask)
-* Git, GitHub, VSCode
+### 技術スタック
+* 言語・フレームワーク・ライブラリ
+    * Python, pandas, dask
+* アプリケーション
+    * AWS Step Functions, Lambda, Batch, Glue
+    * Amazon Athena, DynamoDB, S3
+* DevOps
+    * AWS CloudFormation, CodeBuild
+    * Git, GitHub, VSCode
+* 設計・コミュニケーション
+    * Slack
 
 ### 習得した技術
 * boto3を用いたS3の操作
@@ -195,12 +205,16 @@ ETLツールで構築しているデータ連携基盤について、連携す�
 * 開発（設計、実装、単体テスト）
 * PowerCenterに取り込み可能なXMLファイルの仕様調査
 
-### 使用した技術
-* Python(pandas, ElementTree)
-* PyCharm
-* Sphinx
-* Git
-* Informatica PowerCenter
+### 技術スタック
+* 言語・フレームワーク・ライブラリ
+    * Python, pandas, ElementTree
+    * Sphinx
+* アプリケーション
+    * Informatica PowerCenter
+* DevOps
+    * PyCharm, Git
+* 設計・コミュニケーション
+    * Teams
 
 ### 習得した技術
 * pandasを用いたデータ分析、表データの入出力
@@ -260,8 +274,13 @@ Pythonの実務的な開発経験を持つのが自分のみであったため�
 * 写真管理アプリ(Androidアプリ+Webアプリ)
 * 某申請情報管理Webアプリのモック
 
-### 使用した技術
-Python(wxPython, Tkinter, Numpy, OpenCV), PyCharm, Kotlin, PHP, Git, Docker
+### 技術スタック
+* 言語・フレームワーク・ライブラリ
+    * Python, wxPython, Tkinter, Numpy, OpenCV
+    * Kotlin, PHP
+* DevOps
+    * PyCharm, Android Studio
+    * Git, Docker
 
 ### 習得した技術
 * wxPythonを用いたデスクトップアプリの作成
@@ -320,8 +339,12 @@ ETLツールを用いて複数テーブルの情報を組み合わせ、BIツー
 ### 担当業務
 基本設計(テーブル定義書・データフロー図等)、詳細設計(ビュー定義書等)、実装、単体テスト、結合テスト
 
-### 使用した技術
-AWS(Workspaces, Redshift), Talend, Java
+### 技術スタック
+* 言語・フレームワーク・ライブラリ
+    * Java
+* アプリケーション
+    * Talend
+    * Amazon Redshift, WorkSpaces
 
 ### 習得した技術
 * Redshiftにおけるテーブル、ビューの設計
@@ -363,12 +386,15 @@ Webサイト上の問い合わせボタン押下をトリガーにコールセ�
 ### 担当業務
 画面設計、実装、単体テスト
 
-### 使用した技術
-ASP.NET(JavaScript, JQuery, C#)
+### 技術スタック
+* 言語・フレームワーク・ライブラリ
+    * ASP.NET
+    * JavaScript, jQuery
+    * C#
 
 ### 習得した技術
 * ASP.NETを利用したWebシステム開発
-* JQueryによるダイアログ表示ロジック開発
+* jQueryによるダイアログ表示ロジック開発
 
 ### チーム人数
 3名
