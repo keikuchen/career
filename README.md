@@ -45,9 +45,9 @@ Androidアプリの新規開発
 ### 技術スタック
 * 言語・フレームワーク・ライブラリ
     * Kotlin, Android SDK(29-32)
-        * Jetpack Navigation, Coroutines
-        * Hilt, Retrofit2, Coil
-        * MLKit, Realm
+    * Jetpack Navigation, Coroutines
+    * Hilt, Retrofit2, Coil
+    * MLKit, Realm
 * アプリケーション
     * AWS AppSync
     * Amazon CloudFront, Cognito, S3
