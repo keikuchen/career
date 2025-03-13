@@ -1,3 +1,79 @@
+# 求人ネイティブアプリ開発
+大規模Androidアプリの新規開発・エンハンス開発
+## 期間
+2024年2月 〜 現職
+## 業務内容
+### 本案件の背景
+Webアプリとして展開済みの求人検索サービスを拡大するにあたり、スキマ時間での利用やpush通知によるリアルタイムインタラクションに適したネイティブアプリの開発が求められた。
+
+### 開発の概要
+* 求職者が使用する検索アプリを開発する
+* アジャイル形式で開発
+* ディレクター、デザイナーと連携しながら仕様を整理しつつ実装
+* フルJetpack Compose、KMP、MVVMで実装
+
+### 担当した業務・機能
+* 仕様調整・整理
+* 実装
+    * UI
+        * 無限スクロールビュー
+        * 展開アニメーション
+        * 下部モーダル
+        * WebView
+        * etc
+    * ビジネスロジック
+        * APIコールのエラーハンドリング
+        * お気に入り状態管理
+        * etc
+    * アーキテクチャ
+        * UiState + StateFlowによる状態管理
+        * 画面遷移(compose navigation)
+    * テストコード
+        * UseCase, ドメインモデル
+        * PreviewTest
+    * CI
+        * VRTの環境構築
+    * レビュー
+        * メンバ全員で相互レビューを実施
+* リリース（ストアへの申請、公開）
+
+### 技術スタック
+* 言語・フレームワーク・ライブラリ
+    * Kotlin, KTS, YAML
+    * Jetpack Compose, Android SDK(28-35)
+    * Koin, Ktorfit, SQLDelight, Glide
+    * Roborazzi, Showkase
+    * etc
+* アプリケーション
+    * Firebase Cloud Messaging, Crashlytics
+    * Adjust, Adobe Analytics
+    * Charles, Mockoon
+    * etc
+* DevOps
+    * GitHub Enterprise, Bitrise, DeployGate
+* 設計・コミュニケーション
+    * Slack, Figma, Redoc
+    * Jira, Confluence
+
+### 習得した技術
+* KMPでのAndroidアプリ開発
+* Jetpack Compose内でのWebViewの構築、イベントのフック
+* 各種ライブラリ(Koin, Ktorfit, SQLDelight等)の活用
+* Roborazzi+GHAによるVRT環境構築
+* 職能を越えた仕様提案・調整のマインドセット
+
+### チーム構成
+* アプリ開発チーム
+    * Android：3,4名（20-30代、有識者）
+    * iOS：3,4名（20-30代、有識者）
+    * サーバサイド：3,4名（20-30代、有識者）
+* 上記のほか、ディレクター、デザイナー、マーケター、QAエンジニアともやりとりする
+
+### メンバーとしての振る舞い
+Androidアプリ開発者の1人として、各種機能の実装、リファクタ、レビューを担当した。
+要件の意思決定者と実装者との距離感が近い風土の環境であったため、実装者としての立ち位置に固執せず、デザインやユーザ行動ログ計測等の仕様の調整相談・提案等も実施。
+また、VRTの環境構築を実施し、メンバーのレビューコスト削減に貢献した。
+
 # 宅配サービスの顧客用ネイティブアプリ新規開発
 大規模Androidアプリの新規開発
 ## 期間
